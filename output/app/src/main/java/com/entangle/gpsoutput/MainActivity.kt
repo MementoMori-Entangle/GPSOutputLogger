@@ -290,5 +290,8 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         unregisterReceiver(errorReceiver)
         unregisterReceiver(locationReceiver)
+        // アプリ終了時にGPS送信サービスを停止
+        val stopIntent = Intent(this, GpsService::class.java)
+        stopService(stopIntent)
     }
 }
