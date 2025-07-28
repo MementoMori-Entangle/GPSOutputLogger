@@ -7,7 +7,7 @@ GPSデータの記録と出力を行う
 GPSデータの発生元は3通りを想定  
 1. GPS受信機が取得したデータをUSB経由で送信  
 2. スマートフォンなどが取得したGPSデータをアプリ(*1)がBluetooth経由で送信 → 実装未定(*2)
-3. Wi-Fiインターネットや送信先端末のテザリングAP化で送信
+3. 2のBluetooth部分をWi-Fiインターネットや送信先端末のテザリングAP化で送信
 
 *1はGoogle Play「Bluetooth GPS Output」を利用することも考えましたが、    
 Android13では使用できませんでした。  
@@ -44,9 +44,24 @@ GPSを持たない端末 = Raspberry Pi 4 ModelB
 https://github.com/MementoMori-Entangle/DecibelMonitoringService  
 をベースとしています。
 
-# 出力(output)
-開発環境  
-AndroidStudio JDK11
+1. venvを作成  
+python3 -m venv gpsl --system-site-packages
+
+2. 仮想環境を有効化  
+source gpsl/bin/activate
+
+3. 仮想環境でpip install  
+pip install pyserial psycopg2 flask
+
+4. 仮想環境を抜ける  
+deactivate
+
+アプリソース取得  
+sudo apt update  
+sudo apt install git
+
+クローンしてソース取得  
+git clone https://github.com/MementoMori-Entangle/GPSOutputLogger.git
 
 リポジトリ管理外ファイル  
 my-release-key.jks  
@@ -55,6 +70,10 @@ local.properties
 ca.crt  
 server.crt  
 server.key
+
+# 出力(output)
+開発環境  
+AndroidStudio JDK11
 
 実行環境  
 Android13
@@ -67,8 +86,6 @@ PostgreSQL 17.5 on x86_64-windows, compiled by msvc-19.44.35209, 64-bit
 実行環境  
 Python 3.11.2  
 psql (PostgreSQL) 15.13 (Debian 15.13-0+deb12u1)
-
-Pythonパッケージ : pyserial psycopg2 flask
 
 #ユーザーとDB作成  
 CREATE USER "GPSLogger" WITH PASSWORD 's#gs1Gk3Dh8sa!g3s';  
