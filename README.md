@@ -21,7 +21,7 @@ Bluetoothについて詳しい仕様を別途調査してから対応したい�
 
 GPS受信機  
 USB接続タイプ みちびき2機(194/195)対応 GU-502MGG-USB  
-![20250728_175751](https://github.com/user-attachments/assets/8124e6c0-bfa0-463a-b768-359a96cd96ad)
+<img width="300" height="400" alt="GU-502MGG-USB" src="https://github.com/user-attachments/assets/8124e6c0-bfa0-463a-b768-359a96cd96ad" />
 
 通信遷移  
 1. GPS受信機  
