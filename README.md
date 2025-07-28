@@ -80,5 +80,27 @@ GRANT USAGE, CREATE ON SCHEMA public TO "GPSLogger";
 ALTER DEFAULT PRIVILEGES IN SCHEMA public  
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO "GPSLogger";
 
-# 出力(output)
-Bluetooth通信がこんなに面倒だったなんて四苦八苦
+# ライセンス 2025年7月28日時点
+・logger  
+python  
+| パッケージ名       | ライセンス      |
+|-------------------|----------------|
+| psycopg2	        | LGPL           |
+| flask	           | BSD-3-Clause   |
+| serial	           | BSD            | 
+
+・output  
+kotlin(Java)  
+| パッケージ名                                      | ライセンス                  |
+|--------------------------------------------------|----------------------------|
+| androidx.core:core-ktx                           | Apache License 2.0         |
+| androidx.appcompat:appcompat                     | Apache License 2.0         |
+| com.google.android.material:material             | Apache License 2.0         |
+| androidx.constraintlayout:constraintlayout       | Apache License 2.0         |
+| androidx.navigation:navigation-fragment-ktx      | Apache License 2.0         |
+| androidx.navigation:navigation-ui-ktx            | Apache License 2.0         |
+| com.google.android.gms:play-services-location    | Apache License 2.0         |
+| androidx.biometric:biometric                     | Apache License 2.0         |
+| junit:junit                                      | Eclipse Public License 1.0 |
+| androidx.test.ext:junit                          | Apache License 2.0         |
+| androidx.test.espresso:espresso-core             | Apache License 2.0         |
