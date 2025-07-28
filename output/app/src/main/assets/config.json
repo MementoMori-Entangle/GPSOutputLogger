@@ -1,0 +1,8 @@
+{
+  "ip": "192.168.11.7",
+  "port": 50052,
+  "timeout": 5000,
+  "sendType": "http",
+  "scheme": "http"
+}
+

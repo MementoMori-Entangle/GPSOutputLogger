@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GPSOutput</string>
+    <string name="action_background">バックグラウンドへ</string>
+    <string name="lat_lng">緯度: %1$.6f, 経度: %2$.6f</string>
+    <string name="gps_not_acquired">GPS未取得</string>
+    <string name="lat_lng_not_acquired">座標: 未取得</string>
+    <string name="send_error">送信エラー</string>
+    <string name="send_error_message">送信エラー: %1$s</string>
+    <string name="send_interval">送信間隔: %1$d秒</string>
+    <string name="permission_location_denied">位置情報権限なし</string>
+    <string name="permission_location_denied_toast">位置情報の権限がありません</string>
+    <string name="gps_acquired">GPS取得成功</string>
+    <string name="gps_enabled">GPS有効</string>
+    <string name="gps_disabled">GPS無効</string>
+    <string-array name="send_type_array">
+        <item>http</item>
+        <item>https</item>
+        <item>tcp</item>
+        <item>udp</item>
+    </string-array>
+</resources>
