@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+ï»¿from flask import Flask, request, jsonify
 from insert_gps_data import insert_gps_data_dict
 
 HOST = '0.0.0.0'
@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/gps', methods=['POST'])
 def receive_gps():
     data = request.get_json()
-    print(f"óM: {data}")
+    print(f"å—ä¿¡: {data}")
     insert_gps_data_dict(data, table_name="gps_android_http_log")
     return jsonify({'status': 'ok'})
 

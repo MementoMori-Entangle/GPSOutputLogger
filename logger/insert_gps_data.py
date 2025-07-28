@@ -1,4 +1,4 @@
-import psycopg2
+﻿import psycopg2
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from config import DATABASE_CONFIG
